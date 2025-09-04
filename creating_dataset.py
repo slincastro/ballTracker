@@ -11,7 +11,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 INTERVALO = 0.1
 
 # 📸 Número total de fotos a tomar
-NUM_FOTOS = 30
+NUM_FOTOS = 50
 
 shutter_time = 1000
 
@@ -21,16 +21,18 @@ picam2 = Picamera2()
 picam2.configure(picam2.create_still_configuration())
 picam2.start()
 
-picam2.set_controls({"ExposureTime": shutter_time, 
+picam2.set_controls({"ExposureTime": 1000, 
 "AeEnable": False,
 "AwbEnable": False,
-"AnalogueGain":1.5 , 
+"AnalogueGain":1.0 , 
 "Brightness": -0.3,
-"Contrast":1.2,
+"Contrast":1.0,
 "Saturation":1.2,
-"FrameDurationLimits":(1000,1000)
+"FrameDurationLimits":(2000,2000),
+"ColourGains":(float(1.0),float(1.0)),
+"AwbMode":2
 })
-time.sleep(0.2)
+time.sleep(0.5)
 print(f"📷 Tomando {NUM_FOTOS} fotos cada {INTERVALO} segundos...")
 run_id= uuid.uuid4()
 for i in range(1, NUM_FOTOS + 1):

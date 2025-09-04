@@ -13,7 +13,7 @@ os.makedirs(META_DIR, exist_ok=True)
 
 # === Barridos (ajústalos a tu escena) ===
 # Tiempos de obturador en microsegundos (1/2000s=500, 1/1000s=1000, 1/500s=2000, 1/100s=10000, etc.)
-EXPOSURES_US = [500, 1000, 2000, 5000, 10000, 20000]      # empieza corto para congelar pelota
+EXPOSURES_US = [500, 1000, 2000]      # empieza corto para congelar pelota
 # Ganancias analógicas (≈ ISO). 1.0 es bajo, 2.0-4.0 suben brillo (y ruido).
 GAINS = [1.0, 1.5, 2.0, 3.0, 4.0]
 
