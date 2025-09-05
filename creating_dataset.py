@@ -23,11 +23,11 @@ picam2.set_controls({
     #"AeEnable": False,
     #"AwbEnable": False,
     #"AnalogueGain":1.0 , 
-    #"Brightness": -0.3,
+    "Brightness": 0.1,
     #"Contrast":1.0,
-    #"Saturation":1.2,
+    "Saturation":1.2,
     #"FrameDurationLimits":(2000,2000),
-    #"ColourGains":(float(1.0),float(1.0)),
+    "ColourGains":(float(1.0),float(1.0)),
     #"AwbMode":2
 })
 time.sleep(0.5)
