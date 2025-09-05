@@ -6,8 +6,8 @@ import os
 OUTPUT_DIR = "fotos"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-INTERVALO = 0.1
-NUM_FOTOS = 30
+INTERVALO = 0.05
+NUM_FOTOS = 40
 
 # Inicializar cámara
 picam2 = Picamera2()
