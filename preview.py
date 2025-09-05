@@ -17,7 +17,7 @@ nombre = f"{run_id}.jpg"
 ruta = os.path.join(OUTPUT_DIR, nombre)
 
     # Capturar y guardar
-picam2.capture_file(ruta)
+#picam2.capture_file(ruta)
 
 time.sleep(200)
 
