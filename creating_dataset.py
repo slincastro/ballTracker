@@ -33,12 +33,14 @@ picam2.set_controls({
 time.sleep(0.5)
 
 print(f"📷 Tomando {NUM_FOTOS} fotos cada {INTERVALO} segundos...")
-run_id= uuid.uuid4()
-os.makedirs(f"{OUTPUT_DIR}/{str(run_id)}", exist_ok=True)
+
 
 cycles = 30
 
 for j in range(0, cycles):
+    run_id= uuid.uuid4()
+    os.makedirs(f"{OUTPUT_DIR}/{str(run_id)}", exist_ok=True)
+    
     for i in range(1, NUM_FOTOS + 1):
         nombre = f"{run_id}/{i}.jpg"
         ruta = os.path.join(OUTPUT_DIR, nombre)
