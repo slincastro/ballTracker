@@ -35,7 +35,7 @@ time.sleep(0.5)
 print(f"📷 Tomando {NUM_FOTOS} fotos cada {INTERVALO} segundos...")
 
 
-cycles = 30
+cycles = 50
 
 for j in range(0, cycles):
     run_id= uuid.uuid4()
