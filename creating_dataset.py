@@ -36,17 +36,24 @@ print(f"📷 Tomando {NUM_FOTOS} fotos cada {INTERVALO} segundos...")
 run_id= uuid.uuid4()
 os.makedirs(f"{OUTPUT_DIR}/{str(run_id)}", exist_ok=True)
 
-for i in range(1, NUM_FOTOS + 1):
-    # Generar nombre con UUID y número de foto
-    nombre = f"{run_id}/{i}.jpg"
-    ruta = os.path.join(OUTPUT_DIR, nombre)
+cycles = 10
 
-    # Capturar y guardar
-    picam2.capture_file(ruta)
-    print(f"✅ Foto {i} guardada en {ruta}")
+for j in range(0, cycles):
+    for i in range(1, NUM_FOTOS + 1):
+        nombre = f"{run_id}/{i}.jpg"
+        ruta = os.path.join(OUTPUT_DIR, nombre)
 
-    # Esperar antes de la siguiente
-    time.sleep(INTERVALO)
+        picam2.capture_file(ruta)
+        print(f"✅ Foto {i} guardada en {ruta}")
+
+        time.sleep(INTERVALO)
+    
+    time.sleep(1)
+    print("3-"*20)
+    time.sleep(1)
+    print("2-"*20)
+    time.sleep(1)
+    print("1-"*20)
 
 print("✨ Captura finalizada")
 picam2.close()
