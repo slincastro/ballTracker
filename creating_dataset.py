@@ -36,7 +36,7 @@ print(f"📷 Tomando {NUM_FOTOS} fotos cada {INTERVALO} segundos...")
 run_id= uuid.uuid4()
 os.makedirs(f"{OUTPUT_DIR}/{str(run_id)}", exist_ok=True)
 
-cycles = 10
+cycles = 30
 
 for j in range(0, cycles):
     for i in range(1, NUM_FOTOS + 1):
@@ -49,6 +49,7 @@ for j in range(0, cycles):
         time.sleep(INTERVALO)
     
     time.sleep(1)
+    print(j)
     print("3-"*20)
     time.sleep(1)
     print("2-"*20)
