@@ -9,7 +9,6 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 INTERVALO = 0.05
 NUM_FOTOS = 40
 
-# Inicializar cámara
 picam2 = Picamera2()
 camera_config_preview = picam2.create_preview_configuration()
 camera_config = picam2.create_still_configuration()
@@ -46,7 +45,7 @@ for j in range(0, cycles):
         ruta = os.path.join(OUTPUT_DIR, nombre)
 
         picam2.capture_file(ruta)
-        print(f"✅ Foto {i} guardada en {ruta}")
+        print(f" Foto {i} guardada en {ruta}")
 
         time.sleep(INTERVALO)
     
