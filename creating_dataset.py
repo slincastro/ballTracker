@@ -19,11 +19,11 @@ picam2.start_preview(Preview.QTGL)
 picam2.start()
 
 picam2.set_controls({
-    "ExposureTime": 1000, 
+    "ExposureTime": 800, 
     #"AeEnable": False,
     #"AwbEnable": False,
     #"AnalogueGain":1.0 , 
-    "Brightness": 0.1,
+    "Brightness": 0.2,
     #"Contrast":1.0,
     "Saturation":1.2,
     #"FrameDurationLimits":(2000,2000),
